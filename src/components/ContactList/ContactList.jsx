@@ -1,9 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteContact } from 'redux/operations';
+import {
+  deleteContact,
+  fetchContacts,
+} from 'redux/contacts/contacts-operations';
 import { BeatLoader } from 'react-spinners';
-import { getIsLoading, getError } from 'redux/selectors';
+import { getIsLoading, getError } from 'redux/contacts/contacts-selectors';
 import { BiError } from 'react-icons/bi';
-import Filter from '../Filter';
+import Filter from 'components/Filter';
 import {
   Container,
   List,
@@ -13,6 +16,7 @@ import {
   Delete,
   ErrorMessage,
 } from './ContactList.styled';
+import { useEffect } from 'react';
 
 const ContactList = () => {
   const dispatch = useDispatch();
@@ -29,6 +33,10 @@ const ContactList = () => {
   const sortedContacts = [...filteredContacts].sort((a, b) =>
     a.name.localeCompare(b.name)
   );
+
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
 
   const markup = (
     <>
@@ -71,7 +79,7 @@ const ContactList = () => {
   return error ? (
     <ErrorMessage>
       <BiError size={30} />
-      An error occured!
+      {error}
     </ErrorMessage>
   ) : (
     markup

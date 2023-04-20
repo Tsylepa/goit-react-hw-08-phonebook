@@ -5,8 +5,20 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  padding: 60px 0;
   gap: 30px;
   font-size: 24px;
   border-radius: 10px;
   color: var(--font-color);
+`;
+
+export const Container = styled.div`
+  display: inherit;
+  flex-direction: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  gap: inherit;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
 `;
