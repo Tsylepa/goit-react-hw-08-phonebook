@@ -2,7 +2,6 @@ import { Container, Wrapper } from './App.styled';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { authOperations } from 'redux/auth';
-import AppBar from './AppBar/AppBar';
 import HomePage from 'pages/HomePage';
 import RegistrationPage from 'pages/RegistrationPage';
 import LoginPage from 'pages/LoginPage';
