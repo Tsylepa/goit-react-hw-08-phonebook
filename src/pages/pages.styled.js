@@ -59,6 +59,8 @@ export const ErrorMessage = styled.h1`
 export const Title = styled.h1`
   display: flex;
   gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
   font-size: 34px;
   color: var(--main-color);
   text-align: center;
