@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { authOperations, authSelectors } from 'redux/auth';
 import { Container, Greeting, SignOut, UserPhoto } from './UserMenu.styled';
+import { MdLogout } from 'react-icons/md';
 import avatar from 'images/avatar.jpg';
 
 export default function UserMenu() {
@@ -13,7 +14,7 @@ export default function UserMenu() {
         Welcome, <b>{userName}</b>
       </Greeting>
       <SignOut type="button" onClick={() => dispatch(authOperations.logOut())}>
-        Log Out
+        Log Out <MdLogout />
       </SignOut>
     </Container>
   );

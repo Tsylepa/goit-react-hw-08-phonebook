@@ -7,7 +7,7 @@ export const NavMenu = styled.nav`
 `;
 
 export const NavItem = styled(NavLink)`
-  font-weight: 500;
+  font-weight: 700;
   text-decoration: none;
   color: inherit;
 

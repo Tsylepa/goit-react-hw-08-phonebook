@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Formik, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 import { addContact } from 'redux/contacts/contacts-operations';
+import { AiOutlineUserAdd } from 'react-icons/ai';
 
 const FormError = ({ name }) => {
   return (
@@ -74,7 +75,7 @@ const ContactForm = () => {
               <FormError name="number" />
             </label>
             <Button type="submit" disabled={!(isValid && dirty)}>
-              Add to contacts
+              <AiOutlineUserAdd />
             </Button>
           </AddContactForm>
         );

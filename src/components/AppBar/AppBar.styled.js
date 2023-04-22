@@ -11,6 +11,6 @@ export const Header = styled.header`
   color: var(--contrast-color);
   justify-content: space-between;
   align-items: center;
-  background-color: var(--accent-color);
+  background-color: var(--main-color);
   box-shadow: var(--shadow);
 `;

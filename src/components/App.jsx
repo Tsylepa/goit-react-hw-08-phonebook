@@ -10,6 +10,7 @@ import { Route, Routes } from 'react-router-dom';
 import ContactsPage from 'pages/ContactsPage';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
+import { NotFound } from 'pages/NotFound';
 
 export default function App() {
   const dispatch = useDispatch();
@@ -34,6 +35,7 @@ export default function App() {
           <Route element={<PrivateRoute redirectTo="/login" />}>
             <Route path="/contacts" element={<ContactsPage />} />
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Container>
     </Wrapper>

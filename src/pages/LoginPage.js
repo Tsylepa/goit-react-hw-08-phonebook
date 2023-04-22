@@ -1,7 +1,14 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authOperations } from 'redux/auth';
-import { AuthForm, Input, Button } from './pages.styled';
+import {
+  Container,
+  Title,
+  AuthForm,
+  Input,
+  Button,
+  Link,
+} from './pages.styled';
 import { Formik } from 'formik';
 
 export default function LoginPage() {
@@ -28,13 +35,13 @@ export default function LoginPage() {
   };
 
   return (
-    <div>
-      <h1>Login</h1>
+    <Container>
+      <Title>Login</Title>
 
       <Formik>
         <AuthForm onSubmit={handleSubmit}>
           <label>
-            Email
+            Email:
             <Input
               type="email"
               name="email"
@@ -44,7 +51,7 @@ export default function LoginPage() {
           </label>
 
           <label>
-            Password
+            Password:
             <Input
               type="password"
               name="password"
@@ -52,10 +59,10 @@ export default function LoginPage() {
               onChange={handleChange}
             />
           </label>
-
+          <Link to="/register">Don't have an account? Register</Link>
           <Button type="submit">Log in</Button>
         </AuthForm>
       </Formik>
-    </div>
+    </Container>
   );
 }

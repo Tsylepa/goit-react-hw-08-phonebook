@@ -1,6 +1,8 @@
 :root {
-  --accent-color: #2f005f;
-  --font-color: #212121;
+  --body-color: #fafafa;
+  --main-color: #2f005f;
+  --accent-color: #ff4500;
+  --font-color: #3d3d3d;
   --button: #d5d5d5;
   --button-delete: #972929;
   --button-add: #408940;
@@ -20,11 +22,28 @@ h2 {
   margin: 0;
 }
 
+input,
+button {
+  font-family: inherit;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background-color: var(--body-color);
+  font-family: 'Montserrat Alternates', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

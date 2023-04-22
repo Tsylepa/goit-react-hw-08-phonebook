@@ -4,6 +4,7 @@ import {
   fetchContacts,
 } from 'redux/contacts/contacts-operations';
 import { BeatLoader } from 'react-spinners';
+import { BsSearch } from 'react-icons/bs';
 import { getIsLoading, getError } from 'redux/contacts/contacts-selectors';
 import { BiError } from 'react-icons/bi';
 import Filter from 'components/Filter';
@@ -45,10 +46,10 @@ const ContactList = () => {
       {contacts.length > 0 && (
         <Container>
           <label>
-            Find contact by name:
+            <BsSearch size="18" /> Find contact by name:
             <Filter />
           </label>
-          {isLoading && <BeatLoader />}
+          {isLoading && <BeatLoader color="#ff4500" />}
           {filteredContacts.length === 0 ? (
             <p>No matches found</p>
           ) : (

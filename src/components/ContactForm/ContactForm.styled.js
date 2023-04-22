@@ -3,9 +3,8 @@ import { Form, Field } from 'formik';
 
 export const AddContactForm = styled(Form)`
   display: flex;
-  flex-direction: column;
-  gap: 25px;
-  max-width: 250px;
+  align-items: end;
+  gap: 10px;
 `;
 
 export const Input = styled(Field)`
@@ -13,7 +12,7 @@ export const Input = styled(Field)`
   padding: 6px 10px;
   font-size: 18px;
   border-radius: 4px;
-  border: 2px solid var(--button);
+  border: 2px solid var(--main-color);
 `;
 
 export const ErrorText = styled.p`
@@ -29,9 +28,10 @@ export const ErrorText = styled.p`
 
 export const Button = styled.button`
   display: block;
-  padding: 8px 16px;
+  width: 40px;
+  height: 40px;
   border: none;
-  border-radius: 6px;
+  border-radius: 50%;
   font-size: 20px;
   background: var(--button);
   transition: opacity var(--transition-function),

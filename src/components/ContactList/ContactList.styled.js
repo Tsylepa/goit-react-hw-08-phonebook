@@ -8,12 +8,11 @@ export const Container = styled.div`
 `;
 
 export const List = styled.table`
-  width: 100vw;
-  max-width: 450px;
+  width: 100%;
+  max-width: 100vw;
   border-collapse: collapse;
   text-transform: capitalize;
   border-radius: 8px;
-  box-shadow: var(--shadow);
   overflow: hidden;
 
   tr:nth-of-type(2n + 1) {

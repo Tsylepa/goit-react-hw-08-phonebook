@@ -19,10 +19,13 @@ export const Greeting = styled.p`
 `;
 
 export const SignOut = styled.button`
+  display: flex;
+  align-items: center;
+  gap: 8px;
   border: none;
   border-radius: 4px;
   padding: 8px 12px;
-  background-color: var(--button);
+  background-color: var(--contrast-color);
   transition: background-color var(--transition-function),
     color var(--transition-function);
   cursor: pointer;

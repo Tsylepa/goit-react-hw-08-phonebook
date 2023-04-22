@@ -1,6 +1,15 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authOperations } from 'redux/auth';
+import {
+  Container,
+  Title,
+  AuthForm,
+  Input,
+  Button,
+  Link,
+} from './pages.styled';
+import { Formik } from 'formik';
 
 export default function RegistrationPage() {
   const dispatch = useDispatch();
@@ -31,36 +40,46 @@ export default function RegistrationPage() {
 
   return (
     <>
-      <h1>Registration</h1>
+      <Container>
+        <Title>Registration</Title>
 
-      <form onSubmit={handleSubmit}>
-        <label>
-          Name
-          <input type="text" name="name" value={name} onChange={handleChange} />
-        </label>
+        <Formik>
+          <AuthForm onSubmit={handleSubmit}>
+            <label>
+              Name
+              <Input
+                type="text"
+                name="name"
+                value={name}
+                onChange={handleChange}
+              />
+            </label>
+            <label>
+              Email:
+              <Input
+                type="email"
+                name="email"
+                value={email}
+                onChange={handleChange}
+              />
+            </label>
 
-        <label>
-          Email
-          <input
-            type="email"
-            name="email"
-            value={email}
-            onChange={handleChange}
-          />
-        </label>
+            <label>
+              Password:
+              <Input
+                type="password"
+                name="password"
+                value={password}
+                onChange={handleChange}
+              />
+            </label>
 
-        <label>
-          Password
-          <input
-            type="password"
-            name="password"
-            value={password}
-            onChange={handleChange}
-          />
-        </label>
+            <Link to="/login">Already have an account? Log in</Link>
 
-        <button type="submit">Register</button>
-      </form>
+            <Button type="submit">Sign Up</Button>
+          </AuthForm>
+        </Formik>
+      </Container>
     </>
   );
 }
