@@ -61,7 +61,7 @@ export const ErrorMessage = styled.div`
   justify-content: center;
   gap: 12px;
   width: 100%;
-  max-width: 400px;
+  margin: 0 auto;
   padding: 20px;
   border-radius: 6px;
   font-weight: 500;
